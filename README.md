@@ -6,10 +6,16 @@
 
     * jenkins dashboard --> select job --> Build project --> select this project is parameterized --> Add parameter 
         --> choice parameter --> Add name(env) and choices(dev or prod)
+    
+    * jenkins dashboard --> select job --> Build project --> select this project is parameterized --> Add parameter 
+        --> choice parameter --> Add name(action) and choices(apply or destroy)
 
     * And this command on execute shell 
 
     * terraform init --backend-config=${env}/state.tfvars
 
+    * terraform apply --auto-approve -var-file=env-${env}/main.tfvars
+
+    * terraform ${action} --auto-approve -var-file=env-${env}/main.tfvars
 
 

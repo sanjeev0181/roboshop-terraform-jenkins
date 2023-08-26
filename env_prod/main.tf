@@ -2,4 +2,4 @@
 #     default = "t2.micro"
 # }
 
-env = prod
+# env = prod

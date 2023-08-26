@@ -1,3 +1,5 @@
-variable "instance_type" {}
+variable "instance_type" {
+    type = "string"
+}
 
 variable "env" {}

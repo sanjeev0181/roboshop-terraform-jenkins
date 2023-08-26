@@ -7,11 +7,7 @@ terraform {
   }
 }
 
-# provider "aws" {
-#   # Configuration options
-#   region     = "us-east-1"
-#   profile = "your_aws_cli_profile"
-# }
+
 
 provider "aws" {
   region  = "us-east-1"

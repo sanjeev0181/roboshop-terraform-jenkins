@@ -9,5 +9,5 @@ resource "aws_instance" "web" {
 }
 
 data "aws_security_group" "selected" {
-    name = "launch-wizard-1"
+    name = "launch-wizard-2"
 }

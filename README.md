@@ -12,10 +12,12 @@
 
     * And this command on execute shell 
 
-    * terraform init --backend-config=${env}/state.tfvars
+    * terraform init  -backend-config=env_dev/state.tfvars
 
-    * terraform apply --auto-approve -var-file=env-${env}/main.tfvars
+    * terraform init --backend-config=env_${env}/state.tfvars
 
-    * terraform ${action} --auto-approve -var-file=env-${env}/main.tfvars
+    * terraform apply --auto-approve -var-file=env_${env}/main.tfvars
+
+    * terraform ${action} --auto-approve -var-file=env_${env}/main.tfvars
 
 

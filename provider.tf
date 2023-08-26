@@ -15,7 +15,7 @@ terraform {
 
 provider "aws" {
   region  = "us-east-1"
-  profile = "your_aws_cli_profile"
+  #profile = "your_aws_cli_profile"
 }
 
 

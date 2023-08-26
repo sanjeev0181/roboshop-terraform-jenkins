@@ -1,3 +1,3 @@
-variable "instance_type" {}
+variable "components" {}
 
 variable "env" {}

@@ -1,4 +1,4 @@
-variable "instance_type" {
+components "instance_type" {
     default = "t2.micro"
 }
 

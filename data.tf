@@ -6,6 +6,20 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
+  connection {
+    type     = "ssh"
+    user     = "ubuntu"
+    password = file("~/private/terraform.pem")
+    host     = self.public_ip
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "rm -rf roboshop-terraform-jenkins",
+      "git clone https://github.com/sanjeev0181/roboshop-terraform-jenkins",
+      "cd roboshop-terraform-jenkins"
+    ]
+  }
 }
 
 data "aws_security_group" "selected" {

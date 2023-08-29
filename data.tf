@@ -12,6 +12,7 @@ resource "aws_instance" "web" {
     user     = "ubuntu"
     password = "${file("./private/terraform.pem")}"
     host     = self.public_ip
+    agent = true
   }
 
   provisioner "remote-exec" {

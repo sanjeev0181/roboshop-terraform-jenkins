@@ -17,7 +17,7 @@ resource "aws_instance" "web" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt update",
-      "sudo apt install git -y"
+      "sudo apt install git -y",
       "rm -rf roboshop-terraform-jenkins",
       "git clone https://github.com/sanjeev0181/roboshop-terraform-jenkins",
       "cd roboshop-terraform-jenkins"

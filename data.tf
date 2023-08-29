@@ -18,7 +18,8 @@ resource "aws_instance" "web" {
     inline = [
       "sudo apt-get update",
       "sudo apt-get install -y git",
-      "git clone https://github.com/sanjeev0181/roboshop-terraform-jenkins",
+      "sudo su",
+      "sudo git clone https://github.com/sanjeev0181/roboshop-terraform-jenkins",
       "cd roboshop-terraform-jenkins"
     ]
   }

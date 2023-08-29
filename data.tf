@@ -10,9 +10,8 @@ resource "aws_instance" "web" {
   connection {
     type     = "ssh"
     user     = "ubuntu"
-    password = "${file("./private/terraform.pem")}"
+    private_key = "${file("./private/terraform.pem")}"
     host     = self.public_ip
-    agent = false
   }
 
   provisioner "remote-exec" {
